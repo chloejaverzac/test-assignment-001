@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript class 2016</title>
+  <link rel="shortcut icon" href="../../common/assets/favicons/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../../../jspm_packages/system.js"></script>
+  <script src="../../../config.js"></script>
+  <script>
+    window.define = System.amdDefine;
+    window.require = window.requirejs = System.amdRequire;
+  </script>
+
+</head>
+
+<body>
+  <div id="mocha"></div>
+</body>
+
+<script>
+  require([
+    'mocha',
+    'chai',
+    'sinon-chai',
+
+    './demo.js',
+
+    './async-callback/index.js',
+    './chrome-dev-tools/index.js',
+    './functional-programming/index.js',
+    './functions/index.js',
+    './promises/index.js',
+    './types/index.js',
+
+  ], function (mocha, chai, sinonChai) {
+    mocha.checkLeaks();
+    chai.use(sinonChai);
+
+    mocha.run();
+  });
+</script>
+
+</html>

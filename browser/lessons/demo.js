@@ -14,6 +14,7 @@ describe('A good javascript developer', function () {
 
     it('should be able to use mocha and chai', function () {
       expect(53).to.be.a('Number');
+      // I LOVE U TEACHER
     });
   });
 });
